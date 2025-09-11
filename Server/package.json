@@ -1,0 +1,23 @@
+{
+  "name": "insta-reels-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+   "scripts": {
+  "start": "node index.js",
+  "dev": "nodemon index.js"
+},
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "playwright": "^1.55.0",
+    "winston": "^3.17.0"
+  }
+}
