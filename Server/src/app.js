@@ -12,9 +12,10 @@ app.use(express.json());
 app.use(apiLimiter);  // apply global rate limiter
 
 // Health check
-app.get('/dummy', (req, res) => {
-  res.json({ status: 'success', message: 'Dummy API response 🚀' });
+app.get("/", (req, res) => {
+  res.send("✅ Insta Reels Scrapper API is running!");
 });
+
 
 app.use('/', scrapeRoutes);
 
