@@ -1,8 +1,8 @@
 const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
-const scrapeRoutes = require('./routes/scrapeRoutes');
-const logger = require('../src/utils/logger');
+const scrapeRoutes = require('./src/routes/scrapeRoutes');
+const logger = require('./src/utils/logger');
 
 const app = express();
 
