@@ -88,7 +88,9 @@ async function scrapeReels(username, limit = 10) {
   const safeLimit = Math.min(parseInt(limit, 10) || 10, 50);
   const browser = await puppeteer.launch({
     headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    timeout: 0, // disables default 30 seconds timeout
+    protocolTimeout: 60000, // increases protocol timeout to 60 seconds
   });
 
   try {
