@@ -1,24 +1,17 @@
 const express = require('express');
+const helmet = require('helmet');
 const cors = require('cors');
 const scrapeRoutes = require('./routes/scrapeRoutes');
-const errorHandler = require('./middleware/errorHandler');
-const apiLimiter = require('./middleware/rateLimiter');
+const logger = require('../src/utils/logger');
 
 const app = express();
 
+app.use(helmet());
 app.use(cors());
 app.use(express.json());
 
-app.use(apiLimiter);  // apply global rate limiter
-
-// Health check
-app.get("/", (req, res) => {
-  res.send("✅ Insta Reels Scrapper API is running!");
-});
-
-
 app.use('/', scrapeRoutes);
 
-app.use(errorHandler);
+// Optional: global error handler middleware
 
 module.exports = app;

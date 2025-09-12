@@ -1,25 +1,14 @@
-const scraperService = require('../services/scraperService');
+const { scrapeReels } = require('../services/scraperService');
 
-async function scrapeHandler(req, res, next) {
-  const { username, limit } = req.method === 'POST' ? req.body : req.query;
-
-  if (!username) {
-    return res.status(400).json({ error: 'Username is required' });
-  }
-
-  const reelLimit = Math.min(parseInt(limit) || 5, parseInt(process.env.MAX_REELS_LIMIT) || 30);
+async function getReels(req, res) {
+  const { username, limit } = req.query;
 
   try {
-    const reels = await scraperService.scrapeReels(username, reelLimit);
-    if (!reels.length) {
-      return res.status(404).json({ error: 'No public reels found or profile is private' });
-    }
+    const reels = await scrapeReels(username, limit ? parseInt(limit) : 10);
     res.json({ username, reels });
   } catch (err) {
-    console.error('Error in scrapeHandler:', err); // log error
-    res.status(err.status || 500).json({ error: err.message || 'Internal Server Error' });
+    res.status(err.status || 500).json({ error: err.message || 'Internal error' });
   }
 }
 
-
-module.exports = { scrapeHandler };
+module.exports = { getReels };

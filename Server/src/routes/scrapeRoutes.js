@@ -1,8 +1,8 @@
 const express = require('express');
-const { scrapeHandler } = require('../controllers/scrapeController');
+const { getReels } = require('../controllers/scrapeController');
+
 const router = express.Router();
 
-router.get('/scrape', scrapeHandler);
-router.post('/scrape', scrapeHandler);
+router.get('/scrape', getReels);
 
 module.exports = router;
