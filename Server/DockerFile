@@ -1,0 +1,35 @@
+# Use official Node.js 18 LTS Alpine as base image
+FROM node:18-alpine
+
+# Install dependencies required by Puppeteer and Chromium
+RUN apk add --no-cache \
+    chromium \
+    nss \
+    freetype \
+    freetype-dev \
+    harfbuzz \
+    ca-certificates \
+    ttf-freefont \
+    font-noto \
+    chromium-chromedriver
+
+# Set Puppeteer executable path env for chromium in alpine
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
+
+# Create app directory inside container
+WORKDIR /app
+
+# Copy package.json and package-lock.json (if exists)
+COPY package*.json ./
+
+# Install only production dependencies
+RUN npm install --production
+
+# Copy the rest of your app source code
+COPY Server .
+
+# Expose port your app listens on (adjust if needed)
+EXPOSE 8080
+
+# CMD to run your app
+CMD ["node", "index.js"]
