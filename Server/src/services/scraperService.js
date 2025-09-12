@@ -86,7 +86,10 @@ async function scrapeSingleReel(url, browser) {
 
 async function scrapeReels(username, limit = 10) {
   const safeLimit = Math.min(parseInt(limit, 10) || 10, 50);
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  });
 
   try {
     const page = await browser.newPage();
