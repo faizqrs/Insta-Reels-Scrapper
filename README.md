@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# BookMyShow 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Title :  Insta Reels Scrapper
 
-## Available Scripts
+## Project Description :
+A full-stack web application designed to scrape Instagram reels data effortlessly. Built with React for the frontend, Node.js and Express for the backend, Puppeteer for web scraping, and express-rate-limit to secure the API with rate limiting.
+Live Link :-
+i) For frontend =  https://insta-reels-scrape.netlify.app/
+ii) For backend =  https://insta-reels-scrapper-1-8yj5.onrender.com/
 
-In the project directory, you can run:
+## Technologies :
+This project uses the following technologies :-
 
-### `npm start`
+**Frontend** :- 
+           React.js
+           CSS
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Backend** :-
+            Nodejs,
+            Express,
+            
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Other**   :-   Express-rate-limit
+                 Puppeteer
+           
 
-### `npm test`
+**Api's**   :-  
+            For Frontend = http://localhost:3000/ 
+            For Backend =  http://localhost:8080/scrape?account={}&limit{5}
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+              
+## Project Cloning and Running
 
-### `npm run build`
+Clone the project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+  git clone 
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Go to the project directory
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+  cd insta-reels-scrapper
+```
 
-### `npm run eject`
+Install dependencies on both server and client folder
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+  npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Starting the server :  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ii) For backend  : open terminal on server folder 
+```bash
+  nodemon index.js 
+```
+iii) For Frontend  : open terminal on client folder 
+```bash
+  npm run start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+##  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Your Project will Successufully Running now ,
+        If not running then make sure to adjust nodejs version : try node v14.20.1    
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## Collaborators 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- [@Mo faishal Qureshi](https://github.com/faizqrs)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## Feedback
+
+If you have any feedback, please reach out to me at:
+faisalqrs19@gmail.com 
+
+
